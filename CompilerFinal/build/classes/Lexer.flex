@@ -1,5 +1,5 @@
 import compilerTools.Token;
-
+/*hola*/
 %%
 %class Lexer
 %type Token
