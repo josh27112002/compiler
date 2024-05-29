@@ -524,28 +524,46 @@ public class Compilador extends javax.swing.JFrame {
                   System.out.println(ex);
            }
        }//fin_AbrirArchivo
+    
+   
+    private boolean isHTML(String code) {
+    return code.trim().startsWith("<") && code.trim().endsWith(">");
+}
     private void compile() {
-        btnTripletas.setEnabled(true);
-        jButton3.setEnabled(true);
-        jButton4.setEnabled(true);
-        clearFields();
-        lexicalAnalysis();
-        fillTableTokens();
-        syntacticAnalysis();
-        semanticAnalysis();
-        
-        printConsole();
+    btnTripletas.setEnabled(true);
+    jButton3.setEnabled(true);
+    jButton4.setEnabled(true);
+    clearFields();
+    lexicalAnalysis();
+    fillTableTokens();
+    syntacticAnalysis();
+    semanticAnalysis();
+    printConsole();
+
+    // Verificar si el código es HTML
+    String code = jtpCode.getText();
+    if (isHTML(code)) {
+        try {
+            File tempFile = File.createTempFile("tempHTML", ".html");
+            BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile));
+            writer.write(code);
+            writer.close();
+            Desktop.getDesktop().browse(tempFile.toURI());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    } else {
         int resp = JOptionPane.showConfirmDialog(null, "¿Desea optimizar el código?", "", JOptionPane.YES_NO_OPTION);
         if (resp == JOptionPane.YES_OPTION) {
             jButton4.setEnabled(false);
             optimizacion();
         } else {
             codigoIntermedio();
-}
-        
-        //codigoIntermedio();
-        codeHasBeenCompiled = true;
+        }
     }
+
+    codeHasBeenCompiled = true;
+}
 
     private void lexicalAnalysis() {
         // Extraer tokens
