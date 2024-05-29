@@ -34,10 +34,6 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.Timer;
 
-/**
- *
- * @author marco
- */
 public class Compilador extends javax.swing.JFrame {
 
     private String title,ensamblador;
