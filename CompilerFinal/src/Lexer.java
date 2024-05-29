@@ -3,7 +3,7 @@
 // source: src/Lexer.flex
 
 import compilerTools.Token;
-/*hola*/
+
 
 // See https://github.com/jflex-de/jflex/issues/222
 @SuppressWarnings("FallThrough")
