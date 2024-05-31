@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Prueba de HTML</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web Básica</title>
 </head>
 <body>
-    <h1>¡Hola, mundo!</h1>
-    <p>Este es un párrafo de prueba para verificar la funcionalidad del compilador.</p>
+    <header>
+        <h1>Bienvenido a Mi Página Web</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#sobre">Sobre Mí</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Esta es la sección de inicio de mi página web.</p>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Mí</h2>
+            <p>Aquí puedes encontrar información sobre mí.</p>
+        </section>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para contactarme, puedes enviar un correo a ejemplo@correo.com.</p>
+        </section>
+    </main>
+    <footer>
+        <p>Derechos reservados &copy; 2024</p>
+    </footer>
 </body>
 </html>
