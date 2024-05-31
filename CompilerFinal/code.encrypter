@@ -1,7 +1,10 @@
-CREATE OR REPLACE FUNCTION saludar(nombre IN VARCHAR2)
-RETURN VARCHAR2 IS
-    saludo VARCHAR2(100);
-BEGIN
-    saludo := 'Hola, ' || nombre || '!';
-    RETURN saludo;
-END;
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prueba de HTML</title>
+</head>
+<body>
+    <h1>¡Hola, mundo!</h1>
+    <p>Este es un párrafo de prueba para verificar la funcionalidad del compilador.</p>
+</body>
+</html>

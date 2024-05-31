@@ -1,1 +1,10 @@
-fgsfdgsadfgsdfg
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prueba de HTML</title>
+</head>
+<body>
+    <h1>¡Hola, mundo!</h1>
+    <p>Este es un párrafo de prueba para verificar la funcionalidad del compilador.</p>
+</body>
+</html>

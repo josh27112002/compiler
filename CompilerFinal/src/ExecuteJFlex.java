@@ -1,4 +1,3 @@
-package Compilador;
 
 
 import jflex.exceptions.SilentExit;
